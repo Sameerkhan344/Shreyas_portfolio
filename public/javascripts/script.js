@@ -25,17 +25,18 @@ ScrollTrigger.refresh();
 
 }
 loco();
-// gsap.to("#page1", {
-//     scrollTrigger: {
-//         trigger: "#page1",
-//         start: "top 0%",
-//         end: "top -75vh",
-//         scrub: 2,
-//         pin:true,
-//         scroller:"#bg",
-//         markers:true
-//     },
-// })
+gsap.to("#page2", {
+    scrollTrigger: {
+        trigger: "#page1",
+        start: "top 12%",
+        // end: "top -75vh",
+        scrub: 2,
+        pin:true,
+        scroller:"#bg",
+        markers:true
+  },
+  top:"-40%"
+})
 
 // gsap.to("#page2 .heading", {
 //     scrollTrigger: {
