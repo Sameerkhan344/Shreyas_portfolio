@@ -1,115 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Journal_page</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			media="screen"
+			href="https://fontlibrary.org//face/open-sauce-one"
+			type="text/css"
+		/>
+		<link rel="stylesheet" href="/stylesheets/journal.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/open-sauce-one" type="text/css" />
-    <link rel="stylesheet" href="/stylesheets/journal.css">
-</head>
+	<body>
+		<div id="main">
+			<div id="bg">
+				<div class="nav">
+					<div class="navlpart p1name">
+						<h2>&copy;</h2>
+						<div class="name p1name">
+							<h1 class="design-by">designed by <span>Shreyas</span></h1>
+							<h1 class="full-name">Shreyas Deshmukh</h1>
+						</div>
+					</div>
+					<div class="navrpart">
+						<ul>
+							<li>
+								<a href="/"
+									>Work
+									<div class="dot"></div>
+								</a>
+							</li>
+							<li>
+								<a href="/journal"
+									>Journal
+									<div class="dot"></div
+								></a>
+							</li>
+							<li>
+								<a href=""
+									>About
+									<div class="dot"></div
+								></a>
+							</li>
+							<li>
+								<a href=""
+									>Contact
+									<div class="dot"></div
+								></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="journal">
+					<div class="cursor"></div>
 
-<body>
-    <div id="main">
-    <div id="bg">
-        <div class="nav">
-            <div class="navlpart p1name">
-                <h2>&copy;</h2>
-                <div class="name p1name">
-                    <h1 class="design-by">designed by <span>Shreyas</span></h1>
-                    <h1 class="full-name">Shreyas Deshmukh</h1>
-                </div>
-            </div>
-            <div class="navrpart">
-                <ul>
-                    <li><a href="/">Work
-                            <div class="dot"></div>
-                        </a></li>
-                    <li><a href="/journal">Journal<div class="dot"></div></a></li>
-                    <li><a href="">About<div class="dot"></div></a></li>
-                    <li><a href="">Contact<div class="dot"></div></a></li>
-                </ul>
-            </div>
-        </div>
-        <div id="journal">
-            <div id="journal-top">
-                <div id="jttext" class="jt-text">
-                    <p>A <span class="orangecolor">Collection</span> of my thoughts,ideas,<br>experiments,and
-                        experiences.</p>
-                </div>
-            </div>
-            <div id="journal-bottom">
-                <div id="journal-slider" class="journal-slider">
-                    <div class="case study1">
-                        <div class="case-img">
-                            <img class="pank" onmouseenter="okin()" onmouseout="okout()"
-                                src="https://images.unsplash.com/photo-1654951105230-744294fb42bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                                alt="">
-                        </div>
-                        <div class="case-title">
-                            <h3>coders herea a</h3>
-                        </div>
-                    </div>
-                    <div class="case study1">
-                       <a href="/blog">
-                        <div class="case-img">
-                            <img class="pank" onmouseenter="okin()" onmouseout="okout()"
-                                src="https://images.unsplash.com/photo-1671310063600-4e52914995a7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                                alt="">
-                        </div>
-                       </a>
-                        <div class="case-title">
-                            <h3>Similarities between Law & Product Design</h3>
-                        </div>
-                    </div>
-                    <div class="case study1">
-                        <div class="case-img">
-                            <img onmouseover="okkk()"
-                                src="https://images.unsplash.com/photo-1526364163643-89e30b8fcb70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                                alt="">
-                        </div>
-                        <div class="case-title">
-                            <h3>How to convince stakeholders for a typeface change</h3>
-        
-                        </div>
-                    </div>
-                    <div class="case study1">
-                        <div class="case-img">
-                            <img onmouseover="okkk()"
-                                src="https://images.unsplash.com/photo-1671653892082-6699cc445245?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                                alt="">
-                        </div>
-                        <div class="case-title">
-                            <h3>
-                                Let's guess the WHYs of some everyday apps?</h3>
-        
-                        </div>
-                    </div>
-                    <div class="case study1">
-                        <div class="case-img">
-                            <img onmouseover="okkk()"
-                                src="https://images.unsplash.com/photo-1671653191433-54612279a787?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-                                alt="">
-                        </div>
-                        <div class="case-title"></div>
-                    </div>
-                </div>
-        
-            </div>
-        </div>
-    </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
-        integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
-        integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/javascripts/script.js"></script>
-</body>
+					<div id="journal-top">
+						<div id="jttext" class="jt-text">
+							<p>
+								A <span class="orangecolor"> curated collection</span> of my
+								experiences, <br />experiments & ideas.
+							</p>
+						</div>
+					</div>
+					<div id="journal-bottom">
+						<div id="journal-slider" class="journal-slider">
+							<div class="case study1">
+								<div class="case-img"></div>
+								<div class="case-title">
+									<h3>Law & Design</h3>
+									<p>Similarities in law & product designing.</p>
+								</div>
+							</div>
+							<div class="case study2 case-study">
+								<div class="case-img"></div>
+								<div class="case-title">
+									<h3>Law & Design</h3>
+									<p>Similarities in law & product designing.</p>
+								</div>
+							</div>
+							<div id="study3" class="study3">
+								<div class="case-img"></div>
+								<div class="case-title">
+									<h3>Typeface Change</h3>
+									<p>How to convince stakeholders for a typeface change?</p>
+								</div>
+							</div>
+							<div class="case study4">
+								<div class="case-img"></div>
+								<div class="case-title">
+									<h3>Everyday Apps</h3>
+									<p>
+										Common accessibility testing mistakes that designers are
+										making.
+									</p>
+								</div>
+							</div>
+							<div class="case study5">
+								<div class="case-img"></div>
+								<div class="case-title">
+									<h3>Car Showcase</h3>
+									<p>Modern Designing for better experiences.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+			integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+			integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script>
+			function journalCursor(){
+				const cursor = document.querySelector('.cursor');
+			    let view = document.querySelector('.view');
+			    let caseS =document.querySelector('.case');
 
+			    let mouseX;
+			    let mouseY;
+
+			    window.addEventListener("mousemove",e =>{
+			        mouseX =e.clientX;
+			        mouseY =e.clientY;
+			        gsap.to(cursor , 0.3, {x: mouseX ,y:mouseY})
+					gsap.set(cursor, { xPercent: -20, yPercent: -450 });
+			    })
+			}
+			journalCursor();
+			
+
+			// window.addEventListener("mousemove",(event)=>{
+			//     // cursor.style.top= (event.clientY) + `rem`;
+			//     // cursor.style.left= (event.clientX) + `rem`;
+
+			//         cursor.style.top= (event.clientY)+ `px`;
+			//         cursor.style.left=( event.clientX )+ `px`;
+			//         // console.log(event.clientX/16);
+			// })
+			// document.querySelectorAll(".case-img")
+			// .addEventListener("mousemove",(e)=>{
+			//     cursor.style.display="flex"
+			// })
+			// blog.addEventListener("mouseout",(e)=>{
+			//     cursor.style.display="none"
+			// })
+
+			// gsap.set('.cursor',{xPercent: -20 , yPercent: -450});
+
+			    
+
+			//     caseS.addEventListener('mouseenter',()=>{
+			//         cursor.style.display="none";
+			//         gsap.to( view ,.5,{
+			//             display:'flex',
+			//             scale:1,
+			//             opacity:1,
+			//             top:'-40px',
+			//             left:'-40px',
+			//             // ease: Elastic.easeIn.config(.15, 0.2)
+			//         })
+			//     })
+			//     caseS.addEventListener('mousemove',()=>{
+			//         gsap.to( view,.6,{
+			//             x:mouseX,
+			//             y:mouseY
+			//         })
+			//     })
+			//     caseS.addEventListener('mouseleave',()=>{
+			//         cursor.style.display="none";
+			//         gsap.to( view ,0.6,{
+			//             scale:0,
+			//             top:'-40px',
+			//             left:'-40px',
+			//             opacity:0,
+			//             display:'none',
+			//             // ease: Elastic.easeIn.config(.15, 0.2)
+			//         })
+			//     })
+
+			// document.querySelectorAll('.case').forEach(function (dets) {
+				// gsap.set('.cursor', { xPercent: -20, yPercent: -450 });
+
+			// 	let cursor = document.querySelector('.cursor');
+			// 	let comi = document.querySelector('.coming');
+			// 	// let caseS =document.querySelector('.case');
+
+			// 	let mouseX;
+			// 	let mouseY;
+
+			// 	window.addEventListener('mousemove', e => {
+			// 		mouseX = e.clientX;
+			// 		mouseY = e.clientY;
+			// 		gsap.to(cursor, 0.3, { x: mouseX, y: mouseY });
+			// 	});
+
+			// 	dets.addEventListener('mouseenter', () => {
+			// 		cursor.style.display = 'none';
+			// 		gsap.to(comi, 0.1, {
+			// 			display: 'flex',
+			// 			scale: 1,
+			// 			opacity: 1,
+			// 			top: '-40px',
+			// 			left: '-40px',
+			// 			ease: 'slow(0.7, 0.7, false)',
+			// 		});
+			// 	});
+			// 	dets.addEventListener('mousemove', () => {
+			// 		gsap.to(comi, 0.4, {
+			// 			x: mouseX,
+			// 			y: mouseY,
+			// 		});
+			// 	});
+			// 	dets.addEventListener('mouseleave', () => {
+			// 		cursor.style.display = 'none';
+			// 		gsap.to(comi, 0.1, {
+			// 			scale: 0,
+			// 			top: '-40px',
+			// 			left: '-40px',
+			// 			opacity: 0,
+			// 			display: 'none',
+			// 		});
+			// 	});
+			// });
+
+			function caseStudy() {
+				const caseStuddy = document.querySelector('.case-study');
+				gsap.set('.cursor', { xPercent: -20, yPercent: -450 });
+				let cursor = document.querySelector('.cursor');
+				let view = document.querySelector('.view');
+				// let caseS =document.querySelector('.case');
+				let mouseX;
+				let mouseY;
+				window.addEventListener('mousemove', e => {
+					mouseX = e.clientX;
+					mouseY = e.clientY;
+					gsap.to(cursor, 0.3, { x: mouseX, y: mouseY });
+				});
+				caseStuddy.addEventListener('mouseenter', () => {
+					cursor.style.display = 'none';
+					gsap.to(view, 0.1, {
+						display: 'flex',
+						scale: 1,
+						opacity: 1,
+						top: '-40px',
+						left: '-40px',
+						ease: 'slow(0.7, 0.7, false)',
+					});
+				});
+				caseStuddy.addEventListener('mousemove', () => {
+					gsap.to(view, 0.4, {
+						x: mouseX,
+						y: mouseY,
+					});
+				});
+				caseStuddy.addEventListener('mouseleave', () => {
+					cursor.style.display = 'none';
+					gsap.to(view, 0.1, {
+						scale: 0,
+						top: '-40px',
+						left: '-40px',
+						opacity: 0,
+						display: 'none',
+					});
+				});
+			}
+			// caseStudy();
+
+
+			function journalHover() {
+				var caseAll = document.getElementsByClassName('case');
+				Array.from(caseAll).forEach(elements => {
+					// console.log(elements);
+					const cursor =document.querySelector(".cursor")
+					const study3 = document.getElementById('study3');
+					elements.addEventListener('mouseenter', function () {
+						cursor.style.display="none"
+
+							var caseSes =document.getElementsByClassName('case')
+							for(let i=0 ; i< caseSes.length ;i++){
+								var flag =1;
+								if(flag===1){
+										caseSes[i].style.opacity=".5"
+										caseSes[i].style.filter='grayscale(1)'
+										study3.style.opacity=".5"
+										study3.style.filter='grayscale(1)'
+										flag=0;
+								}
+								else{
+										caseSes[i].style.opacity="1"
+										caseSes[i].style.filter='grayscale(0)'
+										study3.style.opacity="1"
+										study3.style.filter='grayscale(0)'
+										flag=1;
+									}
+								}
+						elements.style.opacity="1"
+						elements.style.filter='grayscale(0)'
+						elements.style.width = '36.1vw';
+					});
+					elements.addEventListener('mouseout', function () {
+						// console.log("eeee")
+						cursor.style.display="flex"
+						var caseSes =document.getElementsByClassName('case')
+							for(let i=0 ; i< caseSes.length ;i++){
+										caseSes[i].style.opacity="1"
+										caseSes[i].style.filter='grayscale(0)'
+										study3.style.opacity="1"
+										study3.style.filter='grayscale(0)'
+							}
+						elements.style.width = '22.6vw';
+
+					});
+				});
+			}
+			journalHover();
+			function study3() {
+				const cursor =document.querySelector(".cursor")
+				const study3 = document.getElementById('study3');
+				study3.addEventListener('mouseenter', function () {
+					cursor.style.display="none"
+					this.style.width = '36.1vw';
+					var caseSes =document.getElementsByClassName('case')
+							for(let i=0 ; i< caseSes.length ;i++){
+								caseSes[i].style.opacity=".5"
+								caseSes[i].style.filter='grayscale(1)'
+								study3.style.opacity="1"
+								study3.style.filter='grayscale(0)'
+							}
+
+				});
+				study3.addEventListener('mouseout', function () {
+					cursor.style.display="flex"
+					study3.style.width = '30.5vw';
+					var caseSes =document.getElementsByClassName('case')
+							for(let i=0 ; i< caseSes.length ;i++){
+								caseSes[i].style.opacity="1"
+								caseSes[i].style.filter='grayscale(0)'
+								study3.style.opacity="1"
+								study3.style.filter='grayscale(0)'
+							}
+				});
+			}
+			study3();
+		</script>
+	</body>
 </html>
