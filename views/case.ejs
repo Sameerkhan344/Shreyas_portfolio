@@ -9,25 +9,56 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/open-sauce-one" type="text/css" />
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/case.css">
 </head>
 
 <body>
     <div id="main">
-        <div id="bg">
-            <div class="nav">
-                <div class="navlpart c1name">
-                    <h2>&copy;</h2>
-                    <div class="name c1name">
-                        <h1 class="design-by">designed by <span>Shreyas</span></h1>
-                        <h1 class="full-name">Shreyas Deshmukh</h1>
-                    </div>
+        <div class="nav">
+            <div class="navlpart c1name">
+                <h2 class="clrchng">&copy;</h2>
+                <div class="name c1name">
+                    <h1 class="design-by clrchng">designed by <span>Shreyas</span></h1>
+                    <h1 class="full-name clrchng">Shreyas Deshmukh</h1>
                 </div>
-                <i class="ri-close-fill"></i>
             </div>
+            <i class="ri-close-fill"></i>
+        </div>
+        <div id="bg">
+            
             <div id="mobile">
             </div>
             <div id="mobile-content">
+                <div class="mbl-txt">
+                    <h2>BindArr</h2>
+                    <h1>Designing India’s first <span>Markerless AR</span> based social networking app</h1>
+                    <div class="mbl-txt-btm">
+                        <div class="role gaps">
+                            <h6>ROLE</h6>
+                            <div class="line-div"></div>
+                           <a href=""><h4>Lead UX UI Designer</h4></a>
+                        </div>
+                        <div class="responsibility gaps">
+                            <h6>RESPONSIBILTY</h6>
+                            <div class="line-div"></div>
+                            <div class="res-product">
+                                <a href="">
+                                    <h4>Product Design</h4>
+                                </a>
+                                <a href="">
+                                    <h4>Branding & Strategy</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="industry gaps">
+                            <h6>INDUSTRY</h6>
+                            <div class="line-div"></div>
+                            <a href="">
+                                <h4>Augmented Reality</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -39,6 +70,59 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
     integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/javascripts/script.js"></script>
+<script>
+    function loco() {
+            gsap.registerPlugin(ScrollTrigger);
+
+
+            const locoScroll = new LocomotiveScroll({
+                el: document.querySelector("#bg"),
+                smooth: true
+            });
+            locoScroll.on("scroll", ScrollTrigger.update);
+
+            ScrollTrigger.scrollerProxy("#bg", {
+                scrollTop(value) {
+                    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+                },
+                getBoundingClientRect() {
+                    return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+                },
+
+                pinType: document.querySelector("#bg").style.transform ? "transform" : "fixed"
+            });
+
+            ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+            ScrollTrigger.refresh();
+
+        }
+        loco();
+//    gsap.to("#mobile-content",{
+//     scrollTrigger:{
+//         trigger:"#mobile-content",
+//         start:"top 0%",
+//         end:"bottom 100%",
+//         markers:true,
+//         scroller:"#bg",
+//         scrub:2,
+//     },
+//     backgroundColor:"red",
+    
+//    })
+    gsap.to(".nav .clrchng", {
+            scrollTrigger: {
+                trigger: ".nav .clrchng",
+                start: "top 0%",
+                end: "bottom 200%",
+                markers: true,
+                scroller: "#bg",
+                scrub: 2,
+            },
+            backgroundColor: "green",
+            mixBlendMode: "multiply"
+
+        })
+</script>
 
 </html>

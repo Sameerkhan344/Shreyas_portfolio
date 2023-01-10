@@ -45,18 +45,42 @@
     </div>
     <div class="cards">
   
+     <div class="Brand">
       <a href="/case">
         <div class="elem"></div>
       </a>
+      <div class="head-dets">
+        <h2>BindArr</h2>
+        <p>Designing India’s first markerless AR based social networking app.</p>
+      </div>
+     </div>
   
-      <div class="elem"><a href=""></a></div>
+    <div class="Brand">
+      <a href="/case">
+        <div class="elem"></div>
+      </a>
+      <div class="head-dets">
+        <h2 class="hidden">BindArr</h2>
+        <p class="hidden">Designing India’s first markerless AR based social networking app.</p>
+      </div>
+    </div>
+    <div class="Brand">
+      <a href="/case">
+        <div class="elem"></div>
+      </a>
+      <div class="head-dets">
+        <h2 class="hidden">BindArr</h2>
+        <p class="hidden">Designing India’s first markerless AR based social networking app.</p>
+      </div>
+    </div>
+      <!-- <div class="elem"><a href=""></a></div>
       <div class="elem"></div>
       <div class="elem"></div>
       <div class="elem"></div>
       <div class="elem"></div>
       <div class="elem"></div>
       <div class="elem"></div>
-      <div class="elem"></div>
+      <div class="elem"></div> -->
     </div>
   </div>
         <div class="text-area">
@@ -64,12 +88,12 @@
             gap between user needs and business metrics through
             human-centric & data-driven designs.
           </h1>
-          <div class="cursor">
+          <!-- <div class="cursor"> -->
             <div class="imgcur">
-              <img src="images/Cursor Effect - Scroll.svg" alt="">
-              <div class="circle"></div>
+              <img src="images/Cursor Effect - Scroll.svg" alt="">             
             </div>
-          </div>
+            <div class="circle"></div>
+          <!-- </div> -->
         </div>
       </div>
     
@@ -83,7 +107,72 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
     integrity="sha512-A64Nik4Ql7/W/PJk2RNOmVyC/Chobn5TY08CiKEX50Sdw+33WTOpPJ/63bfWPl0hxiRv1trPs5prKO8CpA7VNQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="/javascripts/script.js"></script>
+  <script>
+    function loco() {
+        gsap.registerPlugin(ScrollTrigger);
+
+
+        const locoScroll = new LocomotiveScroll({
+          el: document.querySelector("#bg"),
+          smooth: true
+        });
+        locoScroll.on("scroll", ScrollTrigger.update);
+
+        ScrollTrigger.scrollerProxy("#bg", {
+          scrollTop(value) {
+            return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+          },
+          getBoundingClientRect() {
+            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+          },
+
+          pinType: document.querySelector("#bg").style.transform ? "transform" : "fixed"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+        ScrollTrigger.refresh();
+
+      }
+      loco();
+
+      var dets = document.querySelector("#page2 .cards .Brand .head-dets");
+      document.querySelectorAll("#page2 .cards .elem").forEach(function (slide) {
+        slide.addEventListener("mouseenter", function () {
+          slide.style.width = "31.1vw";
+          dets.style.display = "block"
+
+        })
+      })
+      document.querySelectorAll("#page2 .cards .elem").forEach(function (slide) {
+        slide.addEventListener("mouseout", function () {
+          slide.style.width = "12vw";
+          dets.style.display = "none"
+
+
+        })
+      })
+
+      gsap.to("#page2", {
+        scrollTrigger: {
+          trigger: "#page1",
+          start: "top 12%",
+          // end: "top -75vh",
+          scrub: 2,
+          pin: true,
+          scroller: "#bg",
+          markers: true
+        },
+        top: "-40%"
+      })
+    
+      var cursor = document.querySelector(".imgcur");
+        var circle = document.querySelector(".circle");
+      document.addEventListener("mousemove", function(dets){
+        cursor.style.cssText = circle.style.cssText = "left:" + dets.clientX + "px; top:" + dets.clientY + "px;";
+      })
+
+  </script>
 </body>
 
 </html>

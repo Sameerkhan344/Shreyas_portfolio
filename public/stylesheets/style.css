@@ -21,7 +21,7 @@ html,body{
     position:relative;
     width: 100%;
     height: 70vh;
-    background-color: red;
+    /* background-color: red; */
 }
 .nav{
     position: relative;
@@ -180,39 +180,60 @@ letter-spacing: -0.04em;
 color: #FF7C53;
 }
 .text-area .cursor{
-    position: absolute;
-    /* height: 300px;
-    width: 300px; */
+    /* position: absolute;
+
     left: 95%;
-/* right: 0.94%; */
+
 top: 28.03%;
-bottom: 52.25%;
+bottom: 52.25%; */
+/* z-index: 999999; */
+
+}
+@keyframes circle {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .text-area .imgcur {
-    position: relative;
- display: flex;
-    align-items: center;
-    justify-content: center;
+    position: fixed;
+    left: 0;
+    top:0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+      animation-name: circle;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: .1s;
+  z-index: 99;
 }
-.text-area .imgcur .circle{
-    position: absolute;
+.text-area .circle{
+    position: fixed;
+    left: 0;
+    top:0;
+    pointer-events: none;
+    transform: translate(360%, 360%);
     width: 1vw;
     height: 1vw;
     background-color: black;
     border-radius: 50%;
+    transition: .15s;
+  z-index: 99;
+    
 }
 .text-area .imgcur img{
     filter:invert(16%) sepia(79%) saturate(9000%) hue-rotate(8deg) brightness(97%) contrast(60%);
-    /* width: 9vw; */
-    /* mix-blend-mode:color; */
-    /* width: 9vw; */
     /* filter: invert(16%) sepia(99%) saturate(7404%) hue-rotate(4deg) brightness(90%) contrast(60%); */
+    width: 8vw;
 }
 #page2{
     position: absolute;
     top: 100%;
     width: 100%;
-    z-index: 999999999999;
+    z-index: 9;
     min-height: 100vh;
     background-color: rgb(255, 255, 255);
 }
@@ -243,48 +264,38 @@ color: #151515;
     width: 100%;
     height: 70vh;
     /* background-color: red; */
-    white-space: nowrap;
-    overflow-x: auto;
+    display: flex;
+    
 }
-#page2 .cards::-webkit-scrollbar{
+
+/* #page2 .cards::-webkit-scrollbar{
     display: none;
-}
+} */
 #page2 .cards .elem{
    width:  12.0vw;
 height: 46.5vh;
 border-radius: 6px;
     background-color: rgb(62, 128, 186);
-    display: inline-flex;
-    margin-left: 20px;
+    /* display: inline-flex; */
+    /* margin-left: 20px; */
+    transition: width cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+#page2 .cards .Brand{
+    position: relative;
+    padding-left: 20px;
+
+}
+#page2 .cards .Brand .head-dets{
+    display: none;
+    /* width: 100%;
+    height: fit-content; */
+    /* background-color: green !important; */
     transition: width cubic-bezier(0.19, 1, 0.22, 1) 2s;
     
 }
-#page2 .cards .elem:hover{
-    width:31.6vw;
-    /* transform-origin: 50% 50%; */
-}
 
-/* CaseStudy -------------------------------------------------- */
-#main #mobile{
-position: relative;
-width: 100vw;
-min-height: 100vh;
-/* background-color: green; */
-background-image: url(https://images.unsplash.com/photo-1558562805-4bf1e2a724eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-background-position: center;
-background-size: cover;
-}
 
-#main #mobile-content{
-position: relative;
-width: 100%;
-min-height: 100vh;
-background-color: rgb(94, 128, 0);
-}
-.nav i{
-    font-size: 40px;
-    color: #fff;
-}
+
 
 
 
