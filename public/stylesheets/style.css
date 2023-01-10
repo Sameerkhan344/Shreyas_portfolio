@@ -32,7 +32,6 @@ html,body{
     justify-content: space-between;
     padding:40px;
     z-index: 9;
-    /* background-color: rgb(255, 255, 255); */
 }
 .nav .navlpart{
     display: flex;
