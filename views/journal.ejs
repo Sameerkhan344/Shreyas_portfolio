@@ -25,6 +25,14 @@
 	<body>
 		<div id="main">
 			<div id="bg">
+				<div id="circle" class="circle">
+					<div class="circlecommon" id="view">
+						<p>View</p>
+					</div>
+					<div class="circlecommon" id="coming">
+						<p>Coming soon</p>
+					</div>
+				</div>
 				<div class="nav">
 					<div class="navlpart p1name">
 						<h2>&copy;</h2>
@@ -48,13 +56,13 @@
 								></a>
 							</li>
 							<li>
-								<a href=""
+								<a href="/about"
 									>About
 									<div class="dot"></div
 								></a>
 							</li>
 							<li>
-								<a href=""
+								<a href="/contact"
 									>Contact
 									<div class="dot"></div
 								></a>
@@ -74,31 +82,39 @@
 						</div>
 					</div>
 					<div id="journal-bottom">
-						<div id="journal-slider" class="journal-slider">
-							<div class="case study1">
-								<div class="case-img"></div>
-								<div class="case-title">
+						<div class="slider">
+							<div class="blog">
+								<div class="box1 box coming-circ">
+									<a href="#"></a>
+								</div>
+								<div class="blog-title">
+									<h3>Delta mike coders</h3>
+									<p>How to convince stakeholders for a typeface change?</p>
+								</div>
+							</div>
+							<div class="blog">
+								<div class="box2 box view-circ">
+									<a href="/blog"></a>
+								</div>
+								<div class="blog-title">
 									<h3>Law & Design</h3>
 									<p>Similarities in law & product designing.</p>
 								</div>
 							</div>
-							<div class="case study2 case-study">
-								<div class="case-img"></div>
-								<div class="case-title">
-									<h3>Law & Design</h3>
-									<p>Similarities in law & product designing.</p>
+							<div class="blog">
+								<div class="box3 box coming-circ">
+									<a href="#"></a>
 								</div>
-							</div>
-							<div id="study3" class="study3">
-								<div class="case-img"></div>
-								<div class="case-title">
+								<div class="blog-title">
 									<h3>Typeface Change</h3>
 									<p>How to convince stakeholders for a typeface change?</p>
 								</div>
 							</div>
-							<div class="case study4">
-								<div class="case-img"></div>
-								<div class="case-title">
+							<div class="blog">
+								<div class="box4 box coming-circ">
+									<a href="#"></a>
+								</div>
+								<div class="blog-title">
 									<h3>Everyday Apps</h3>
 									<p>
 										Common accessibility testing mistakes that designers are
@@ -106,11 +122,31 @@
 									</p>
 								</div>
 							</div>
-							<div class="case study5">
-								<div class="case-img"></div>
-								<div class="case-title">
-									<h3>Car Showcase</h3>
-									<p>Modern Designing for better experiences.</p>
+							<div class="blog">
+								<div class="box5 box view-circ">
+									<a href="#"></a>
+								</div>
+								<div class="blog-title">
+									<h3>Law & Design</h3>
+									<p>How to convince stakeholders for a typeface change?</p>
+								</div>
+							</div>
+							<div class="blog">
+								<div class="box6 box coming-circ">
+									<a href="#"></a>
+								</div>
+								<div class="blog-title">
+									<h3>Law & Design</h3>
+									<p>How to convince stakeholders for a typeface change?</p>
+								</div>
+							</div>
+							<div class="blog">
+								<div class="box6 box coming-circ">
+									<a href="#"></a>
+								</div>
+								<div class="blog-title">
+									<h3>Law & Design</h3>
+									<p>How to convince stakeholders for a typeface change?</p>
 								</div>
 							</div>
 						</div>
@@ -132,237 +168,105 @@
 			referrerpolicy="no-referrer"
 		></script>
 		<script>
-			function journalCursor(){
-				const cursor = document.querySelector('.cursor');
-			    let view = document.querySelector('.view');
-			    let caseS =document.querySelector('.case');
+			function cursorFollow() {
+				const viewBox = document.getElementsByClassName('view-circ');
+				const comingBox = document.getElementsByClassName('coming-circ');
+				const viewText = document.getElementById('view');
+				const comingText = document.getElementById('coming');
+				const circle = document.getElementById('circle');
 
-			    let mouseX;
-			    let mouseY;
-
-			    window.addEventListener("mousemove",e =>{
-			        mouseX =e.clientX;
-			        mouseY =e.clientY;
-			        gsap.to(cursor , 0.3, {x: mouseX ,y:mouseY})
-					gsap.set(cursor, { xPercent: -20, yPercent: -450 });
-			    })
-			}
-			journalCursor();
-			
-
-			// window.addEventListener("mousemove",(event)=>{
-			//     // cursor.style.top= (event.clientY) + `rem`;
-			//     // cursor.style.left= (event.clientX) + `rem`;
-
-			//         cursor.style.top= (event.clientY)+ `px`;
-			//         cursor.style.left=( event.clientX )+ `px`;
-			//         // console.log(event.clientX/16);
-			// })
-			// document.querySelectorAll(".case-img")
-			// .addEventListener("mousemove",(e)=>{
-			//     cursor.style.display="flex"
-			// })
-			// blog.addEventListener("mouseout",(e)=>{
-			//     cursor.style.display="none"
-			// })
-
-			// gsap.set('.cursor',{xPercent: -20 , yPercent: -450});
-
-			    
-
-			//     caseS.addEventListener('mouseenter',()=>{
-			//         cursor.style.display="none";
-			//         gsap.to( view ,.5,{
-			//             display:'flex',
-			//             scale:1,
-			//             opacity:1,
-			//             top:'-40px',
-			//             left:'-40px',
-			//             // ease: Elastic.easeIn.config(.15, 0.2)
-			//         })
-			//     })
-			//     caseS.addEventListener('mousemove',()=>{
-			//         gsap.to( view,.6,{
-			//             x:mouseX,
-			//             y:mouseY
-			//         })
-			//     })
-			//     caseS.addEventListener('mouseleave',()=>{
-			//         cursor.style.display="none";
-			//         gsap.to( view ,0.6,{
-			//             scale:0,
-			//             top:'-40px',
-			//             left:'-40px',
-			//             opacity:0,
-			//             display:'none',
-			//             // ease: Elastic.easeIn.config(.15, 0.2)
-			//         })
-			//     })
-
-			// document.querySelectorAll('.case').forEach(function (dets) {
-				// gsap.set('.cursor', { xPercent: -20, yPercent: -450 });
-
-			// 	let cursor = document.querySelector('.cursor');
-			// 	let comi = document.querySelector('.coming');
-			// 	// let caseS =document.querySelector('.case');
-
-			// 	let mouseX;
-			// 	let mouseY;
-
-			// 	window.addEventListener('mousemove', e => {
-			// 		mouseX = e.clientX;
-			// 		mouseY = e.clientY;
-			// 		gsap.to(cursor, 0.3, { x: mouseX, y: mouseY });
-			// 	});
-
-			// 	dets.addEventListener('mouseenter', () => {
-			// 		cursor.style.display = 'none';
-			// 		gsap.to(comi, 0.1, {
-			// 			display: 'flex',
-			// 			scale: 1,
-			// 			opacity: 1,
-			// 			top: '-40px',
-			// 			left: '-40px',
-			// 			ease: 'slow(0.7, 0.7, false)',
-			// 		});
-			// 	});
-			// 	dets.addEventListener('mousemove', () => {
-			// 		gsap.to(comi, 0.4, {
-			// 			x: mouseX,
-			// 			y: mouseY,
-			// 		});
-			// 	});
-			// 	dets.addEventListener('mouseleave', () => {
-			// 		cursor.style.display = 'none';
-			// 		gsap.to(comi, 0.1, {
-			// 			scale: 0,
-			// 			top: '-40px',
-			// 			left: '-40px',
-			// 			opacity: 0,
-			// 			display: 'none',
-			// 		});
-			// 	});
-			// });
-
-			function caseStudy() {
-				const caseStuddy = document.querySelector('.case-study');
-				gsap.set('.cursor', { xPercent: -20, yPercent: -450 });
-				let cursor = document.querySelector('.cursor');
-				let view = document.querySelector('.view');
-				// let caseS =document.querySelector('.case');
-				let mouseX;
-				let mouseY;
-				window.addEventListener('mousemove', e => {
-					mouseX = e.clientX;
-					mouseY = e.clientY;
-					gsap.to(cursor, 0.3, { x: mouseX, y: mouseY });
-				});
-				caseStuddy.addEventListener('mouseenter', () => {
-					cursor.style.display = 'none';
-					gsap.to(view, 0.1, {
-						display: 'flex',
-						scale: 1,
-						opacity: 1,
-						top: '-40px',
-						left: '-40px',
-						ease: 'slow(0.7, 0.7, false)',
+				// ---------For showing VIEW cursor inside BLogs---
+				Array.from(viewBox).forEach(elements => {
+					elements.addEventListener('mouseenter', event => {
+						viewText.style.display = 'flex';
+						comingText.style.display = 'none';
+						circle.style.height = '140px';
+						circle.style.width = '140px';
+					});
+					elements.addEventListener('mouseout', event => {
+						viewText.style.display = 'none';
+						comingText.style.display = 'none';
+						circle.style.height = '12px';
+						circle.style.width = '12px';
 					});
 				});
-				caseStuddy.addEventListener('mousemove', () => {
-					gsap.to(view, 0.4, {
-						x: mouseX,
-						y: mouseY,
+				// ---------For showing COMING SOON cursor inside BLogs---
+				Array.from(comingBox).forEach(elements => {
+					elements.addEventListener('mouseenter', event => {
+						viewText.style.display = 'none';
+						comingText.style.display = 'flex';
+						circle.style.height = '140px';
+						circle.style.width = '140px';
 					});
-				});
-				caseStuddy.addEventListener('mouseleave', () => {
-					cursor.style.display = 'none';
-					gsap.to(view, 0.1, {
-						scale: 0,
-						top: '-40px',
-						left: '-40px',
-						opacity: 0,
-						display: 'none',
+					elements.addEventListener('mouseout', event => {
+						viewText.style.display = 'none';
+						comingText.style.display = 'none';
+						circle.style.height = '12px';
+						circle.style.width = '12px';
 					});
 				});
 			}
-			// caseStudy();
+			cursorFollow();
+			function mouseMove() {
+				const circle = document.getElementById('circle');
+				document.addEventListener('mousemove', function (e) {
+					var x = e.clientX;
+					var y = e.clientY;
+					circle.style.left = x + 'px';
+					circle.style.top = y + 'px';
+				});
+			}
+			mouseMove();
+			function blogAnimation() {
+				const boxAll = document.querySelectorAll('.box');
+				const blogAll = document.querySelectorAll('.blog');
 
-
-			function journalHover() {
-				var caseAll = document.getElementsByClassName('case');
-				Array.from(caseAll).forEach(elements => {
-					// console.log(elements);
-					const cursor =document.querySelector(".cursor")
-					const study3 = document.getElementById('study3');
-					elements.addEventListener('mouseenter', function () {
-						cursor.style.display="none"
-
-							var caseSes =document.getElementsByClassName('case')
-							for(let i=0 ; i< caseSes.length ;i++){
-								var flag =1;
-								if(flag===1){
-										caseSes[i].style.opacity=".5"
-										caseSes[i].style.filter='grayscale(1)'
-										study3.style.opacity=".5"
-										study3.style.filter='grayscale(1)'
-										flag=0;
-								}
-								else{
-										caseSes[i].style.opacity="1"
-										caseSes[i].style.filter='grayscale(0)'
-										study3.style.opacity="1"
-										study3.style.filter='grayscale(0)'
-										flag=1;
-									}
-								}
-						elements.style.opacity="1"
-						elements.style.filter='grayscale(0)'
-						elements.style.width = '36.1vw';
+				// -----This is for all boxes Sizing ,EVEN ODD----
+				Array.from(boxAll).forEach(elements => {
+					elements.addEventListener('mouseenter', () => {
+						var odd = document.querySelectorAll('.blog:nth-child(odd) .box');
+						var even = document.querySelectorAll('.blog:nth-child(even) .box');
+						for (let j = 0; j < odd.length; j++) {
+							odd[j].style.width = '325px';
+						}
+						for (let k = 0; k < even.length; k++) {
+							even[k].style.width = '325px';
+						}
+					elements.style.width = '520px';
 					});
 					elements.addEventListener('mouseout', function () {
-						// console.log("eeee")
-						cursor.style.display="flex"
-						var caseSes =document.getElementsByClassName('case')
-							for(let i=0 ; i< caseSes.length ;i++){
-										caseSes[i].style.opacity="1"
-										caseSes[i].style.filter='grayscale(0)'
-										study3.style.opacity="1"
-										study3.style.filter='grayscale(0)'
-							}
-						elements.style.width = '22.6vw';
+						var odd = document.querySelectorAll('.blog:nth-child(odd) .box');
+						var even = document.querySelectorAll('.blog:nth-child(even) .box');
+						for (let j = 0; j < odd.length; j++) {
+							odd[j].style.width = '440px';
+						}
+						for (let k = 0; k < even.length; k++) {
+							even[k].style.width = '325px';
+						}
+					});
+				});
 
+				// ----------This is for all blog Black & White----
+				Array.from(blogAll).forEach(elements => {
+					elements.addEventListener('mouseenter', () => {
+						var blog = document.querySelectorAll('.blog');
+						for (let i = 0; i < blog.length; i++) {
+							blog[i].style.opacity = '.2';
+							blog[i].style.filter = 'grayscale(.4)';
+						}
+						elements.style.opacity = '1';
+						elements.style.filter = 'grayscale(0)';
+					});
+					elements.addEventListener('mouseout', () => {
+						var blog = document.querySelectorAll('.blog');
+						for (let i = 0; i < blog.length; i++) {
+							blog[i].style.opacity = '1';
+							blog[i].style.filter = 'grayscale(0)';
+						}
 					});
 				});
 			}
-			journalHover();
-			function study3() {
-				const cursor =document.querySelector(".cursor")
-				const study3 = document.getElementById('study3');
-				study3.addEventListener('mouseenter', function () {
-					cursor.style.display="none"
-					this.style.width = '36.1vw';
-					var caseSes =document.getElementsByClassName('case')
-							for(let i=0 ; i< caseSes.length ;i++){
-								caseSes[i].style.opacity=".5"
-								caseSes[i].style.filter='grayscale(1)'
-								study3.style.opacity="1"
-								study3.style.filter='grayscale(0)'
-							}
-
-				});
-				study3.addEventListener('mouseout', function () {
-					cursor.style.display="flex"
-					study3.style.width = '30.5vw';
-					var caseSes =document.getElementsByClassName('case')
-							for(let i=0 ; i< caseSes.length ;i++){
-								caseSes[i].style.opacity="1"
-								caseSes[i].style.filter='grayscale(0)'
-								study3.style.opacity="1"
-								study3.style.filter='grayscale(0)'
-							}
-				});
-			}
-			study3();
+			blogAnimation();
 		</script>
 	</body>
 </html>
