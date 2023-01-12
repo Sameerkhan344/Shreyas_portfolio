@@ -1,0 +1,199 @@
+:root{
+    --black :#151515;
+    --orange :#FF7C53;
+    --grey_one : #575757;
+    --grey_two : #8F8F8F;
+    --grey_three : #C3C3C3;
+    --outline : #ECEBEE;
+    --hsize_14: 14px;
+}
+@font-face {
+    font-family: "OpenSauceOneRegular";
+    src: url(../fonts/OpenSauceOne-Regular.ttf);
+}
+@font-face {
+    font-family: "osoBold";
+    src: url(../fonts/OpenSauceOne-Bold.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "OpenSauceOneRegular";
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    cursor: none;
+}
+
+#main{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    cursor: none;
+}
+.nav{
+    position: relative;
+    width: 100%;
+    max-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:40px;
+    z-index: 9;
+    /* background-color: rgb(255, 255, 255); */
+}
+.nav .navlpart{
+    display: flex;
+    align-items: center;
+    letter-spacing: 4px;
+    
+}
+.nav .navlpart h2{
+    font-weight:100 ;
+    /* opacity: 0.5; */
+    /* color: #8F8F8F; */
+}
+.nav .navlpart h1{
+    position: absolute;
+    font-family: 'Open Sauce One';
+    /* font-style: normal; */
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.04em;    
+    /* color: #8F8F8F; */
+}
+.p1name{
+   color: #8F8F8F;
+}
+.c1name{
+   color: #ffffff;
+}
+.p1name h2{
+   color: #8F8F8F;
+}
+.c1name h2{
+   color: #ffffff;
+}
+
+
+.nav .navlpart span{
+    font-weight: 500;
+    font-size: 16px;
+    /* color: rgb(0, 0, 0); */
+}
+.p1name span{
+    color: #151515;
+}
+.c1name span{
+    color: #ffffff;
+}
+.nav .navlpart .name{
+    position: relative;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.nav .navlpart .name h1>span{
+    font-weight: 700;
+}
+.nav .navlpart .name .full-name{
+    transform: translateY(200%);
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    color: rgb(0, 0, 0);
+    opacity: 1;
+    font-weight: 500;
+}
+.nav .navlpart .name .design-by{
+      transform: translateY(0%);
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.nav .navlpart .name:hover .full-name{
+    transform: translateY(0%);
+}
+.nav .navlpart .name:hover .design-by{
+    transform: translateY(-200%);
+}
+.nav .navrpart ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+.nav .navrpart ul li a{
+    position: relative;
+    width: 80px;
+    height: 100px;
+    /* background-color: red; */
+    font-weight: 600;
+    color: #151515;
+    font-size: 0.9vw;
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: top cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+.nav .navrpart ul li{
+    list-style: none;
+}
+.nav .navrpart ul li .dot{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background:#FF7C53;;
+    left: -10px;
+    bottom: 20%;
+    transition: left cubic-bezier(0.19, 1, 0.22, 1) .5s;
+}
+.nav .navrpart ul li a:hover{
+    top: 10px;
+}
+.nav .navrpart ul li:hover .dot{
+     left: 30%;
+}
+.nav .navrpart ul{
+    display: flex;
+    gap: 44.5px;
+    color: #151515;
+    
+}
+/* -----------Nav Enddd----- */
+/* -------------------Main cursor ------------ */
+#circle{
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: black;
+    pointer-events: none;
+    overflow: hidden;
+    transition: width .3s ease, height .3s ease;
+}
+#circle>.circlecommon{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    display: none;
+}
+#view>p,#coming>p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    color: white;
+    white-space: nowrap;
+    font-size: 15px;
+}
